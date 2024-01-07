@@ -6,12 +6,12 @@ from interbotix_xs_modules.arm import InterbotixManipulatorXS
 # Then change to this directory and type 'python gripper_control.py  # python3 bartender.py if using ROS Noetic'
 
 def main():
-    arm = InterbotixManipulatorXS("wx200", "arm", "gripper")
-    arm.gripper.close(2.0)
-    arm.gripper.open(2.0)
+    arm = InterbotixManipulatorXS("lucasrobot", "arm", "gripper")
+    arm.gripper.close()
+    arm.gripper.open()
     arm.gripper.set_pressure(1.0)
-    arm.gripper.close(2.0)
-    arm.gripper.open(2.0)
+    arm.gripper.close()
+    arm.gripper.open()
 
 if __name__=='__main__':
     main()

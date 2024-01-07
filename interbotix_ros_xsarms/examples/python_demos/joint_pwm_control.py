@@ -7,7 +7,7 @@ from interbotix_xs_modules.arm import InterbotixManipulatorXS
 
 def main():
     joint_pwms = [0, 100 , 100, 25, 0]
-    bot = InterbotixManipulatorXS("vx250", "arm", "gripper")
+    bot = InterbotixManipulatorXS("lucasrobot", "arm", "gripper")
     bot.dxl.robot_set_operating_modes("group", "arm", "pwm")
     bot.dxl.robot_write_commands("arm", joint_pwms)
 

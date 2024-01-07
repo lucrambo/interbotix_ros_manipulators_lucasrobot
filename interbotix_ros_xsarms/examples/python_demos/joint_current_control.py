@@ -7,7 +7,7 @@ from interbotix_xs_modules.arm import InterbotixManipulatorXS
 
 def main():
     joint_currents = [0, 200 , 200, 50, 0]
-    bot = InterbotixManipulatorXS(robot_model="vx250")
+    bot = InterbotixManipulatorXS(robot_model="lucasrobot")
     bot.dxl.robot_set_operating_modes("group", "arm", "current")
     bot.dxl.robot_write_commands("arm", joint_currents)
 

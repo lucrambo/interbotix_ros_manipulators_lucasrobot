@@ -15,12 +15,12 @@ def main():
         {6.0: [-0.5, 0.0, 0.0, 0.0, 0.5, 0.0]}
     ]
 
-    bot = InterbotixManipulatorXS("wx250s", "arm", "gripper")
+    bot = InterbotixManipulatorXS("lucasrobot", "arm", "gripper")
     bot.arm.go_to_home_pose()
     bot.dxl.robot_write_trajectory("group", "arm", "position", trajectory)
     sleep(6.0)  # sleep to ensure trajectory has time to complete
     bot.arm.go_to_home_pose()
-    bot.arm.go_to_sleep_pose()
+    #bot.arm.go_to_sleep_pose()
 
 if __name__ == '__main__':
     main()
